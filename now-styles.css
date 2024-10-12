@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: brown;
+  }
+  
+  .left-ctr {
+    display: inline;
+    float: left;
+    width: 60%;
+    height: 80vh;
+    background-color:blueviolet;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+  }
+  .right-ctr {
+    display: inline;
+    float: right;
+    height: 80vh;
+    width: 40%;
+    background-color:crimson;
+  }
+  
+  .curr-news {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .left-info-ctr {
+    position: relative;
+    z-index: 1;
+    /* margin: 0; */
+    margin-top: -3.5vw;
+    /* /top: 10px; */
+    padding: 0;
+  }
+  
+  .left-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    background-color:red;
+    width: 24vw;
+    /* padding-bottom: 20px; */
+  }
+  
+  .left-subtitle {
+      font-weight: medium;
+      font-size: 1.75rem;
+      padding-top: 20px;
+  }
