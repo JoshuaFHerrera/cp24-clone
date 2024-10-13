@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+nav {
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  position: fixed;
+  background-color: black;
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.nav-links li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: black;
+  padding: 6px 15px;
+  margin-left: 30px;
+}
+
+.nav-lines-ctr {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-lines-ctr div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.nav-btn {
+  font-size: 0.7rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.nav-btn:focus,
+.nav-btn:hover {
+  color: white;
+}
+
+.nav-btn:focus:after,
+.nav-btn:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.nav-btn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /*
+    
+    NAVBAR
+    (MAX-WIDTH:770PX)
+    
+    */
+
+  .nav-links {
+    position: absolute;
+    z-index: 6;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    display: flex;
+    color: grey;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    color: white;
+  }
+
+  .nav-links a {
+    color: white;
+  }
+
+  .nav-lines-ctr {
+    display: block;
+  }
+}
+
+.nav-active {
+  /* Translating the nav-links */
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  /* Nav-links animation, JS property */
+  from {
+    /* Start */
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    /* End */
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+input {
+  background-color: #f5f5f5;
+  color: #242424;
+  padding: 0.15rem 0.5rem;
+  min-height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+  border-bottom: 2px solid #5b5fc7;
+  border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+  outline: 1px solid lightgrey;
+}
+
+button[type="submit"] {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 144, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+button:active {
+  transform: translate(0em, 0.2em);
+}
+
+.info-ctr {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: url(./assets/default.jpeg);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-card {
+  color: black;
+  background: linear-gradient(180deg, orange, hsl(210, 100%, 75%));
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  text-align: center;
+  border: 4px solid black;
+  box-shadow: 5px 5px 30px;
+  bottom: 100px;
+  min-width: 20vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 5vh;
+}
+
+.info-card h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 2vh;
+}
+
+.info-card .temp {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 2vh;
+}
+
+.info-card .humidity,
+.info-card .description {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2vh;
+}
+
+.info-card .emoji {
+  font-size: 6rem;
+  margin: 0;
+}
