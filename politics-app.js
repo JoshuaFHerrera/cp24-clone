@@ -161,11 +161,11 @@ function displayBlogs(articles) {
   const cardTitle12 = document.getElementById("card12-title");
   const cardDesc12 = document.getElementById("card12-desc");
   const cardHref12 = document.getElementById("card12-href");
-  cardImg12.src = articles[12].urlToImage;
-  cardImg12.alt = articles[12].title;
-  cardTitle12.textContent = articles[12].title;
-  cardDesc12.textContent = articles[12].description;
-  cardHref12.href = articles[12].url;
+  cardImg12.src = articles[13].urlToImage;
+  cardImg12.alt = articles[13].title;
+  cardTitle12.textContent = articles[13].title;
+  cardDesc12.textContent = articles[13].description;
+  cardHref12.href = articles[13].url;
 }
 
 (async () => {
