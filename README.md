@@ -21,4 +21,4 @@
 
 #### Vineet Panchal
 #### Joshua Herrera
-#### Open Source Hack Fest 2024 - Major League Hacking
+#### Open Source Hackfest 2024 - Major League Hacking
