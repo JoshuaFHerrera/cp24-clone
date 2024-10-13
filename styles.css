@@ -16,6 +16,7 @@ nav {
   min-height: 10vh;
   position: fixed;
   background-color: black;
+  z-index: 999;
 }
 
 .nav-logo {
@@ -168,10 +169,12 @@ nav {
 }
 
 .blog-ctr {
-  /* padding-left: 30px;  */
   padding-left: auto;
   padding-right: auto;
-  /* margin: 0 -5px; */
+}
+
+.top-stories-ctr, .sports-ctr, .politics-ctr{
+  margin-top: 2vw;
 }
 
 .column {
@@ -179,29 +182,12 @@ nav {
   width: 25%;
   padding: 0 10px;
 
-  /* width: 190px; */
-  /* height: 254px; */
 } 
 
-/* .card { */
-  /* width: 100%;   */
-  /* height: 100%; */
-  /* width: 190px; */
-  /* height: 254px; */
-  /* background-color: #1a1a1a; */
-  /* border-radius:; */
-  /* width: 190px; */
-  /* height: 254px; */
-  /* border-radius: 30px;
-  background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25),
-              -15px -15px 30px rgb(60, 60, 60); */
-/* } */
 
 .card {
   box-sizing: border-box;
-  /* width: 190px; */
-  /* height: 254px; */
+  z-index: 1;
   background: rgba(217, 217, 217, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -303,4 +289,41 @@ nav {
 
 .action:hover span {
   transform: translateX(4px);
+}
+
+
+
+.top-stories-title-ctr, .sports-title-ctr, .politics-title-ctr {
+  margin-bottom: 1vw;
+  margin-left: 2vw;
+}
+
+.top-stories-btn, .sports-btn, .politics-btn {
+  /* color: white; */
+  text-decoration: none;
+  font-size: 3vw;
+  border: none;
+  background: none;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.top-stories-btn::before, .sports-btn::before, .politics-btn {
+  margin-left: auto;
+}
+
+.top-stories-btn::after, .top-stories-btn::before, .sports-btn::after, .sports-btn::before, .politics-btn::after, .politics::before {
+  content: '';
+  width: 0%;
+  height: 4px;
+  /* background: #f44336; */
+  background: slateblue;
+  display: block;
+  transition: 0.5s;
+}
+
+.top-stories-btn:hover::after, .top-stories-btn:hover::before, .sports-btn:hover::after, .sports-btn:hover::before, .politics-btn:hover::after, .politics-btn:hover::before {
+  width: 100%;
 }
