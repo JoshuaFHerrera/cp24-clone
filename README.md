@@ -9,6 +9,9 @@
 ## Now Page:
 ### Displays a recent news feed. Displays top articles, updates to NASDAQ stock prices, and the current date and time.
 
+## Weather Page:
+### Displays the current weather for the entered city.
+
 ## Sports Page:
 ### Lists several sports-related articles.
 
